@@ -50,6 +50,9 @@ class MainTableViewController: UITableViewController {
         case 0:
             let vc = storyBoard.instantiateViewController(withIdentifier: "TextViewController")
             navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let vc = storyBoard.instantiateViewController(withIdentifier: "ColorCollectionViewController")
+            navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }
