@@ -14,11 +14,13 @@ class MainTableViewController: UITableViewController {
 
     let dataSource = ["Text", "Color", "Modal presentations", "Contextual menus"]
     
+    lazy var storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: mainTableViewCellIdentifier)
-        tableView.separatorStyle = .none
+//        tableView.separatorStyle = .none
     }
 
     // MARK: - Table view data source
@@ -43,5 +45,26 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+        case 0:
+            let vc = storyBoard.instantiateViewController(withIdentifier: "TextViewController")
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "SECTION 1"
+        default:
+            return nil
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "Test Footer Title"
     }
 }
