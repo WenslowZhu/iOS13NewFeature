@@ -1,0 +1,32 @@
+//
+//  WebViewController.swift
+//  iOS13NewFeature
+//
+//  Created by tstone10 on 2019/6/27.
+//  Copyright © 2019 朱廷. All rights reserved.
+//
+
+import UIKit
+import WebKit
+class WebViewController: UIViewController {
+
+    @IBOutlet weak var webView: WKWebView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        webView.load(URLRequest(url: URL(string: "https://www.bing.com")!))
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

@@ -19,6 +19,12 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        let appearance = UINavigationBarAppearance()
+//        appearance.configureWithOpaqueBackground()
+//        appearance.titleTextAttributes = [.foregroundColor: UIColor.systemBlue]
+//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.systemBlue]
+//        navigationController?.navigationBar.standardAppearance = appearance
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: mainTableViewCellIdentifier)
 //        tableView.separatorStyle = .none
     }
@@ -52,6 +58,9 @@ class MainTableViewController: UITableViewController {
             navigationController?.pushViewController(vc, animated: true)
         case 1:
             let vc = storyBoard.instantiateViewController(withIdentifier: "ColorCollectionViewController")
+            navigationController?.pushViewController(vc, animated: true)
+        case 2:
+            let vc = storyBoard.instantiateViewController(withIdentifier: "ModalPresentationsViewController")
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
