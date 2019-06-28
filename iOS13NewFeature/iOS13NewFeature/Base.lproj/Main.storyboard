@@ -261,6 +261,46 @@
             </objects>
             <point key="canvasLocation" x="2249" y="1551"/>
         </scene>
+        <!--Location View Controller-->
+        <scene sceneID="Wnh-3g-E4o">
+            <objects>
+                <viewController restorationIdentifier="LocationViewController" storyboardIdentifier="LocationViewController" id="zD1-dI-KJd" customClass="LocationViewController" customModule="iOS13NewFeature" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yjv-2m-LfH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uwc-jK-mUq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="333"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="333" id="ELf-jG-qWr"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiM-2l-tDP">
+                                <rect key="frame" x="170.5" y="401" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startLocate:" destination="zD1-dI-KJd" eventType="touchUpInside" id="a2W-z5-AtF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Uwc-jK-mUq" firstAttribute="trailing" secondItem="lpn-TD-E4j" secondAttribute="trailing" id="8Ry-KW-ztt"/>
+                            <constraint firstItem="jiM-2l-tDP" firstAttribute="top" secondItem="Uwc-jK-mUq" secondAttribute="bottom" constant="68" id="ccx-A2-H1h"/>
+                            <constraint firstItem="Uwc-jK-mUq" firstAttribute="leading" secondItem="lpn-TD-E4j" secondAttribute="leading" id="kWW-6P-pEo"/>
+                            <constraint firstItem="Uwc-jK-mUq" firstAttribute="top" secondItem="yjv-2m-LfH" secondAttribute="top" id="kbC-6J-cXn"/>
+                            <constraint firstItem="jiM-2l-tDP" firstAttribute="centerX" secondItem="yjv-2m-LfH" secondAttribute="centerX" id="smV-O1-aq7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lpn-TD-E4j"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Uwc-jK-mUq" id="Sw9-TI-iBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcQ-tL-scm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248.8000000000002" y="2270.9145427286358"/>
+        </scene>
         <!--List Menu-->
         <scene sceneID="W7x-EV-28d">
             <objects>

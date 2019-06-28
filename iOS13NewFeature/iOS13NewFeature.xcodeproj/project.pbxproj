@@ -21,6 +21,8 @@
 		D43158BE22C4726300395A7F /* ColorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43158BD22C4726300395A7F /* ColorCollectionViewController.swift */; };
 		D451E25C22C5B908002569F8 /* ContextualMenusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451E25B22C5B908002569F8 /* ContextualMenusViewController.swift */; };
 		D451E26022C5ED49002569F8 /* ContextualMenusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451E25F22C5ED49002569F8 /* ContextualMenusTableViewController.swift */; };
+		D451E26222C5F6E2002569F8 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451E26122C5F6E2002569F8 /* LocationViewController.swift */; };
+		D451E26422C5FF56002569F8 /* SignInWithAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451E26322C5FF56002569F8 /* SignInWithAppleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		D43158BD22C4726300395A7F /* ColorCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewController.swift; sourceTree = "<group>"; };
 		D451E25B22C5B908002569F8 /* ContextualMenusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualMenusViewController.swift; sourceTree = "<group>"; };
 		D451E25F22C5ED49002569F8 /* ContextualMenusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualMenusTableViewController.swift; sourceTree = "<group>"; };
+		D451E26122C5F6E2002569F8 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		D451E26322C5FF56002569F8 /* SignInWithAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				D41AB62922C49E21001876E0 /* WebViewController.swift */,
 				D451E25B22C5B908002569F8 /* ContextualMenusViewController.swift */,
 				D451E25F22C5ED49002569F8 /* ContextualMenusTableViewController.swift */,
+				D451E26122C5F6E2002569F8 /* LocationViewController.swift */,
+				D451E26322C5FF56002569F8 /* SignInWithAppleViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -171,9 +177,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D451E26422C5FF56002569F8 /* SignInWithAppleViewController.swift in Sources */,
 				D43158BC22C46CF700395A7F /* TextViewController.swift in Sources */,
 				D451E26022C5ED49002569F8 /* ContextualMenusTableViewController.swift in Sources */,
 				3B3DA0EE22C3AA5F000CFF15 /* MainTableViewController.swift in Sources */,
+				D451E26222C5F6E2002569F8 /* LocationViewController.swift in Sources */,
 				D41AB62A22C49E21001876E0 /* WebViewController.swift in Sources */,
 				D41AB62822C493A0001876E0 /* ModelPresentedViewController.swift in Sources */,
 				3B3DA0D722C3A8DF000CFF15 /* ViewController.swift in Sources */,

@@ -12,7 +12,7 @@ let mainTableViewCellIdentifier = "mainTableViewCellIdentifier"
 
 class MainTableViewController: UITableViewController {
 
-    let dataSource = ["Text", "Color", "Modal Presentations", "Contextual Menus Collection View", "Contextual Menus Table View"]
+    let dataSource = ["Text", "Color", "Modal Presentations", "Contextual Menus Collection View", "Contextual Menus Table View", "Location", "Sign In With Apple"]
     
     lazy var storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
@@ -54,6 +54,10 @@ class MainTableViewController: UITableViewController {
             vc = storyBoard.instantiateViewController(withIdentifier: "ContextualMenusViewController")
         case 4:
             vc = storyBoard.instantiateViewController(withIdentifier: "ContextualMenusTableViewController")
+        case 5:
+            vc = storyBoard.instantiateViewController(withIdentifier: "LocationViewController")
+        case 6:
+            vc = SignInWithAppleViewController()
         default:
             vc = UIViewController()
         }
