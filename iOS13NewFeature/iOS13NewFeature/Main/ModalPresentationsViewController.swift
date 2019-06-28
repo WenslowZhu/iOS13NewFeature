@@ -14,10 +14,8 @@ class ModalPresentationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        // Do any additional setup after loading the view.
     }
+    
     @IBAction func fullScreen(_ sender: Any) {
         presentVC(style: .fullScreen)
     }

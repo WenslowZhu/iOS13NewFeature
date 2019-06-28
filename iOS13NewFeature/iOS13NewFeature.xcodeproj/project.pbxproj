@@ -19,7 +19,8 @@
 		D41AB62A22C49E21001876E0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41AB62922C49E21001876E0 /* WebViewController.swift */; };
 		D43158BC22C46CF700395A7F /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43158BB22C46CF700395A7F /* TextViewController.swift */; };
 		D43158BE22C4726300395A7F /* ColorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43158BD22C4726300395A7F /* ColorCollectionViewController.swift */; };
-		D43158C022C47AE800395A7F /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43158BF22C47AE800395A7F /* ColorCollectionViewCell.swift */; };
+		D451E25C22C5B908002569F8 /* ContextualMenusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451E25B22C5B908002569F8 /* ContextualMenusViewController.swift */; };
+		D451E26022C5ED49002569F8 /* ContextualMenusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D451E25F22C5ED49002569F8 /* ContextualMenusTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,8 @@
 		D41AB62922C49E21001876E0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D43158BB22C46CF700395A7F /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		D43158BD22C4726300395A7F /* ColorCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewController.swift; sourceTree = "<group>"; };
-		D43158BF22C47AE800395A7F /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		D451E25B22C5B908002569F8 /* ContextualMenusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualMenusViewController.swift; sourceTree = "<group>"; };
+		D451E25F22C5ED49002569F8 /* ContextualMenusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualMenusTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +88,14 @@
 		3B3DA0E622C3A928000CFF15 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D43158BF22C47AE800395A7F /* ColorCollectionViewCell.swift */,
 				3B3DA0ED22C3AA5F000CFF15 /* MainTableViewController.swift */,
 				D43158BB22C46CF700395A7F /* TextViewController.swift */,
 				D43158BD22C4726300395A7F /* ColorCollectionViewController.swift */,
 				D41AB62522C49226001876E0 /* ModalPresentationsViewController.swift */,
 				D41AB62722C493A0001876E0 /* ModelPresentedViewController.swift */,
 				D41AB62922C49E21001876E0 /* WebViewController.swift */,
+				D451E25B22C5B908002569F8 /* ContextualMenusViewController.swift */,
+				D451E25F22C5ED49002569F8 /* ContextualMenusTableViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -169,12 +172,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43158BC22C46CF700395A7F /* TextViewController.swift in Sources */,
-				D43158C022C47AE800395A7F /* ColorCollectionViewCell.swift in Sources */,
+				D451E26022C5ED49002569F8 /* ContextualMenusTableViewController.swift in Sources */,
 				3B3DA0EE22C3AA5F000CFF15 /* MainTableViewController.swift in Sources */,
 				D41AB62A22C49E21001876E0 /* WebViewController.swift in Sources */,
 				D41AB62822C493A0001876E0 /* ModelPresentedViewController.swift in Sources */,
 				3B3DA0D722C3A8DF000CFF15 /* ViewController.swift in Sources */,
 				D41AB62622C49226001876E0 /* ModalPresentationsViewController.swift in Sources */,
+				D451E25C22C5B908002569F8 /* ContextualMenusViewController.swift in Sources */,
 				3B3DA0D322C3A8DF000CFF15 /* AppDelegate.swift in Sources */,
 				D43158BE22C4726300395A7F /* ColorCollectionViewController.swift in Sources */,
 				3B3DA0D522C3A8DF000CFF15 /* SceneDelegate.swift in Sources */,

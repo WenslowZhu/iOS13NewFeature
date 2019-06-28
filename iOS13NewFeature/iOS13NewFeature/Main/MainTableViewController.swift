@@ -12,32 +12,21 @@ let mainTableViewCellIdentifier = "mainTableViewCellIdentifier"
 
 class MainTableViewController: UITableViewController {
 
-    let dataSource = ["Text", "Color", "Modal presentations", "Contextual menus"]
+    let dataSource = ["Text", "Color", "Modal Presentations", "Contextual Menus Collection View", "Contextual Menus Table View"]
     
     lazy var storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        let appearance = UINavigationBarAppearance()
-//        appearance.configureWithOpaqueBackground()
-//        appearance.titleTextAttributes = [.foregroundColor: UIColor.systemBlue]
-//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.systemBlue]
-//        navigationController?.navigationBar.standardAppearance = appearance
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: mainTableViewCellIdentifier)
-//        tableView.separatorStyle = .none
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return dataSource.count
     }
 
@@ -52,19 +41,24 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let vc: UIViewController
+        
         switch indexPath.row {
         case 0:
-            let vc = storyBoard.instantiateViewController(withIdentifier: "TextViewController")
-            navigationController?.pushViewController(vc, animated: true)
+            vc = storyBoard.instantiateViewController(withIdentifier: "TextViewController")
         case 1:
-            let vc = storyBoard.instantiateViewController(withIdentifier: "ColorCollectionViewController")
-            navigationController?.pushViewController(vc, animated: true)
+            vc = storyBoard.instantiateViewController(withIdentifier: "ColorCollectionViewController")
         case 2:
-            let vc = storyBoard.instantiateViewController(withIdentifier: "ModalPresentationsViewController")
-            navigationController?.pushViewController(vc, animated: true)
+            vc = storyBoard.instantiateViewController(withIdentifier: "ModalPresentationsViewController")
+        case 3:
+            vc = storyBoard.instantiateViewController(withIdentifier: "ContextualMenusViewController")
+        case 4:
+            vc = storyBoard.instantiateViewController(withIdentifier: "ContextualMenusTableViewController")
         default:
-            break
+            vc = UIViewController()
         }
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
