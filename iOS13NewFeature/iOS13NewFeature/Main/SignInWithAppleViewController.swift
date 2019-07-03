@@ -9,10 +9,10 @@
 import UIKit
 import AuthenticationServices
 
-class SignInWithAppleViewController: UIViewController, ASAuthorizationControllerDelegate {
-//    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-//
-//    }
+class SignInWithAppleViewController: UIViewController, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +42,16 @@ class SignInWithAppleViewController: UIViewController, ASAuthorizationController
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]
         let controller = ASAuthorizationController(authorizationRequests: [request])
-//        controller.delegate = self
-//        controller.presentationContextProvider = self
+        controller.delegate = self
+        controller.presentationContextProvider = self
         controller.performRequests()
     }
 
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print(error)
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        print(authorization)
+    }
 }
